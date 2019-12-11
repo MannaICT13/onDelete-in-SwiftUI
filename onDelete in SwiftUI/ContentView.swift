@@ -22,6 +22,8 @@ struct ContentView: View {
                 
                 Text("\($0)")
             }
+            .onDelete(perform: removeRows(at:))
+            
             
             }
         }
@@ -29,6 +31,14 @@ struct ContentView: View {
         
         
     }
+    
+    func removeRows(at offsets : IndexSet ){
+        
+        arrayOfName.remove(atOffsets : offsets)
+        
+    }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
