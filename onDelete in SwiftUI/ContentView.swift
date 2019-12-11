@@ -14,6 +14,8 @@ struct ContentView: View {
     
     var body: some View {
         
+        NavigationView{
+          
         VStack{
             
             List{
@@ -27,7 +29,10 @@ struct ContentView: View {
             
             }
         }
+        .navigationBarTitle(Text("onDelete"),displayMode: .inline)
         
+        .navigationBarItems(leading: EditButton())
+        }
         
         
     }
@@ -37,7 +42,7 @@ struct ContentView: View {
         arrayOfName.remove(atOffsets : offsets)
         
     }
-    
+
     
 }
 
