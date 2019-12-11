@@ -9,8 +9,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var arrayOfName = ["Manna","Munna","Shaon","Limon","Lalon","Shumon","Rakibul","Milon","Harun","Liton"]
+    
     var body: some View {
-        Text("Hello World")
+        
+        VStack{
+            
+            List{
+                
+            ForEach(arrayOfName ,id: \.self){
+                
+                Text("\($0)")
+            }
+            
+            }
+        }
+        
+        
+        
     }
 }
 
